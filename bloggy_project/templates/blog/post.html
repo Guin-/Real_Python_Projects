@@ -1,8 +1,6 @@
-<html>
-<head>
-	<title> Bloggy: {{single_post.title }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 <h2>{{ single_post.title }}</h2>
 <ul>
 	<p><em>{{ single_post.created_at }}</em></p>
@@ -17,5 +15,4 @@
 	</p>
 </ul>
 <p> Had enough? Return <a href="/blog">home</a></p><br/>
-<body>
-</html>
+{% endblock %}
