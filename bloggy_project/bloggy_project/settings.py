@@ -32,9 +32,9 @@ SECRET_KEY = '#728lo3j%p#$gfkj2@c5y02ovk(96&h&c+9d-*6ptg#j*ss!5g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = [https://pure-tor-2367.herokuapp.com]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
