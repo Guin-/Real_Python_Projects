@@ -30,11 +30,11 @@ TEMPLATE_DIRS=(os.path.join(PROJECT_ROOT, 'templates'),)
 SECRET_KEY = '#728lo3j%p#$gfkj2@c5y02ovk(96&h&c+9d-*6ptg#j*ss!5g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -72,12 +72,12 @@ WSGI_APPLICATION = 'bloggy_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'bloggy.db'),
-    }
+    'default': dj_database_url.config (
+        default='sqlite:////{0}'.format(os.path.join(PROJECT_ROOT, 'bloggy.db')
+    )
 }
 
 # Internationalization
