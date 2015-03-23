@@ -76,7 +76,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config (
-        default='sqlite:////{0}'.format(os.path.join(PROJECT_ROOT, 'bloggy.db')
+        default='sqlite:////{0}'.format(os.path.join(PROJECT_ROOT, 'bloggy.db'))
     )
 }
 
@@ -99,4 +99,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SECURE_PROXY_SSL_HEADER = (‘HTTP_X_FORWARDED_PROTO’, ‘https’)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
